@@ -1,0 +1,39 @@
+body{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: space-evenly;
+	flex-direction: column;
+	background-color:palegoldenrod
+}
+#h2{
+	margin: 0px;
+	padding: 5px;
+}
+#container{
+	margin: 5px;
+	display: flex;
+	border-style: solid;
+	border-width: 1px;
+	height: 500px;
+	width: 700px;
+	border-color: black;
+	background-color: white;
+}
+
+#resetButton{
+	font-size: 20px;
+}
+
+.cell{
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	border-style: solid;
+	border-width: 0.1px;
+	height: 10px;
+	width: 14px;
+	box-sizing: border-box;
+}
