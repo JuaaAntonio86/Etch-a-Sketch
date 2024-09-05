@@ -1,4 +1,6 @@
 const container = document.getElementById("container");
+const resetButton = document.getElementById("resetButton");
+const slider = document.getElementById('slider');
 
 for(let j = 0; j < 50; j++){
 	const linediv = document.createElement("div");
@@ -15,11 +17,24 @@ for(let j = 0; j < 50; j++){
 	container.appendChild(linediv);
 }
 
-function mouseover(element) {
+function mouseover(element){
 	let increment = parseInt(element.dataset.increment);
 	if (increment > 0) {
 		increment -= 60;
 		element.style.backgroundColor = `rgb(${increment}, ${increment}, ${increment})`;
 		element.dataset.increment = increment; // Update increment value
 	}
+}
+
+resetButton.addEventListener("click", function(){
+	ClearDiv();
+});
+
+function ClearDiv(){
+	const alldvis = document.querySelectorAll(".cell");
+
+	alldvis.forEach((ndiv) => {
+		ndiv.style.backgroundColor = "white";
+		ndiv.dataset.increment = 255;
+	});
 }
